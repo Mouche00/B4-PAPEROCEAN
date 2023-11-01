@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+    </style> 
+    <title>Oceanpaper | Admin</title>
+</head>
+<body class="font-[Inter]">
+    <nav></nav>
+    <section class="flex">
+        <div id="sidebar" class="h-screen bg-neutral-800 w-[20%]">
+            <div class="h-[45%] flex flex-col items-center place-content-between">
+                <div class="w-full mt-5 mb-5">
+                    <img class="mx-auto" src="../img/tempsnip-removebg-preview 2.png">
+                </div>
+                <div class="w-[60%] flex flex-col items-center place-content-between text-xl text-neutral-50 font-medium">
+                    <div class="w-full text-center p-5 border-white border-y-2 transition ease-in-out delay-150 hover:bg-neutral-50 hover:text-neutral-950">
+                        <button id="books-btn" class="w-full h-full" type="button">Books</button>
+                    </div>
+                    <div class="w-full text-center p-5 border-white transition ease-in-out delay-150 hover:bg-neutral-50 hover:text-neutral-950">
+                        <button id="cat-btn" class="w-full h-full" type="button">Categories</button>
+                    </div>
+                    <div class="w-full text-center p-5 border-white transition ease-in-out delay-150 border-y-2 hover:bg-neutral-50 hover:text-neutral-950">
+                        <button id="aut-btn" class="w-full h-full" type="button">Authors</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main" class="w-[80%]">
+            <div id="main-books">
+                <div id="main-books-bar" class="flex place-content-between items-center m-4">
+                    <div></div>
+                    <h1 class="text-5xl font-bold">Books Table</h1>
+                    <button class="bg-green-700 text-neutral-50 rounded w-32 h-10" type="button">Add Books</button>
+                </div>
+                <div id="main-books-table">
+
+                </div>
+                <div style="display: block;" id="main-boos-form">
+                    <form action="" class="flex flex-col items-center place-content-evenly border-2 border-gray w-[40%] mx-auto h-[40vh] rounded">
+                        <h1 class="text-2xl font-bold">Add Books</h1>
+                        <div class="w-[90%] flex place-content-between items-center">
+                            <label>Id:</label>
+                            <input class="w-[80%] bg-neutral-200 h-10 px-2" type="text" id="id" placeholder="1315168151" disabled>
+                        </div>
+                        <div class="w-[90%] flex place-content-between items-center">
+                            <label>ISBN:</label>
+                            <input class="w-[80%] bg-neutral-100 h-10 px-2" type="text" id="isbn" placeholder="9780345538376">
+                        </div>
+                        <div class="w-[90%] flex place-content-between items-center">
+                            <label>Title:</label>
+                            <input class="w-[80%] bg-neutral-100 h-10 px-2" type="text" id="title" placeholder="The Lord Of The Rings">
+                        </div>
+                        <div class="w-[90%] flex place-content-between items-center">
+                            <label>Description:</label>
+                            <textarea id="description" class="w-[80%] bg-neutral-100 h-20 px-2" placeholder="When Thorin Oakenshield and his band of dwarves embark upon a dangerous quest to reclaim the hoard of gold... "></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
