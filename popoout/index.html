@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+
+    <title>Document</title>
+</head>
+<body class="bg-gray-200">
+    <div class="container mx-auto px-10">
+
+        <div class="flex justify-between ">
+            <div><img src="tempsnip-removebg-preview 2.png" alt="" width="70px" height="50px"></div>
+            <div><img class="mt-5" src="button ferme.png" alt="" width="20" height="20"></div>
+         </div>
+         <h3 class="mt-20" class="font-extrabold"><b>builling details </b> </h3><br><br>
+
+         <div class="form">
+            <form id="form">
+                        <label for="fname">First & Last name</label><br>
+                        
+                        <input  class="border-2 border-neutral-950 border-opacity-100  w-96"  type="text" id="fname" name="fname" placeholder="First & Last name">
+                        <p class="text-red-500" id="nameError"> </p><br><br>
+
+                        <label for="email">Email Adress</label><br>
+                        
+                        <input  class="border-2 border-neutral-950 border-opacity-100 w-96" type="text" id="email" name="email" placeholder="Email Adress">
+                        <p class="text-red-500" id="emailError"> </p><br><br>
+
+                        <label for="country">Country</label><br>
+                        <select  class="border-2 border-neutral-950 border-opacity-100 w-96 " name="" id="">
+                        <option value="Morocco">Morocco</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Belgium">Belgium</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Argentina">Argentina</option>
+            </select><br><br>
+            
+            <div class="flex space-x-4">
+                <div>
+                    <label for="state/country">state/country</label><br>
+                    <input  class="border-2 border-neutral-950 border-opacity-100" type="text" id="statecountry" name="state/country">
+                    <p class="text-red-500" id="statecountryError"> </p><br><br>
+                </div>    
+                <div>
+                        <label for="Zip/postal code">Zip/postal code</label><br>
+                        <input  class="border-2 border-neutral-950 border-opacity-100" type="text" id="zippostal" name="Zip/postal code">
+                        <p class="text-red-500" id="zippostalError"> </p><br><br>
+                    </div>
+            </div>
+            <h3 class="mt-20" class="font-extrabold"><b>Payment method </b></h3><br>
+            <select  class="border-2 border-neutral-950 border-opacity-100 w-96" name="" id="">
+                <label for="Credit Cart">Credit Cart</label>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Visa">Visa</option>
+                <option value="MasterCard">MasterCard</option>  
+            </select><br><br>
+            <label for="Card number">Card number</label><br>
+            <input  class="border-2 border-neutral-950 border-opacity-100 w-96" type="text" id="cardnumber" name="Card number" placeholder="5489 4887 123 6544">
+            <p class="text-red-500" id="cardnumberError"> </p><br><br>
+
+            <div class="flex space-x-4">
+            <div>
+            <label for="Expiration date">Expiration date</label><br>
+            <select  class="border-2 border-neutral-950 border-opacity-100" name="" id="">
+                <option value="Mounth">Mounth</option>
+                <option value="January">January</option>
+                <option value="February">February</option>  
+                <option value="March">March</option>
+                <option value="April">April</option> 
+                <option value="May">May</option>
+                <option value="June">June</option> 
+                <option value="July">July</option>
+                <option value="August">August</option> 
+                <option value="September">September</option>
+                <option value="October">October</option> 
+                <option value="November">November</option>
+                <option value="December">December</option> 
+            </select>
+            </div>
+            <div>
+                <div class="mt-6">
+                <select class="border-2 border-neutral-950 border-opacity-100"  name="" id="">
+                    <option value="Year">Year</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>  
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option> 
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option> 
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option> 
+                </select>
+            </div>
+        </div>
+            <div>
+                <label for="Security code">Security code</label><br>
+                <input class="border-2 border-neutral-950 border-opacity-100" type="text" id="threedigits" name="Three digits" placeholder="Three digits">
+                <p class="text-red-500" id="threedigitsError"> </p><br><br><br>
+            </div>
+            </div>
+            <label for="optional">(optional)</label><br>
+            <input  class="border-2 border-neutral-950 border-opacity-100 w-96" type="text" id="paypal" name="Card number" placeholder="PayPal">
+            <p class="text-red-500" id="paypalError"> </p><br><br>
+            <p class="text-sm">By clicking the button you agree to the Terms and Conditions</p><br>
+            <button class="border-2 border-neutral-950 border-opacity-100 w-96 bg-green-500 text-white" type="submit" class="click"><b>Order Now</b></button>
+
+</form>
+         </div>
+
+    </div>
+
+
+
+
+    <script src="style.js"></script>
+</body>
+</html>
