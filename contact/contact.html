@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="overlay" class="bg-white h-screen flex items-center justify-center">
+        <form class="max-w-md w-full bg-gray-200 p-8 rounded-md shadow-lg">
+            <h1 class="text-2xl font-bold text-center">CONTACT US</h1>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+                <input class="w-80 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                       type="text" placeholder="First Name" /><br>
+                <input class="w-80 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                       type="text" placeholder="Last Name" /><br>
+                <input class="w-80 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                       type="email" placeholder="Email" />
+            </div>
+            <div class="my-4">
+                <textarea placeholder="Message" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            <div class="center mt-4 flex justify-center">
+                <input type="submit" value="Send Message" class="w-full max-w-xs bg-green-300 text-lg p-2 rounded-md cursor-pointer">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
