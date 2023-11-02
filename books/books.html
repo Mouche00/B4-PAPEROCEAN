@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+    </style> 
+    <title>Oceanpaper | Books</title>
+</head>
+<body class="font-['inter'] relative">
+
+    <!-- Navigation Buttons -->
+    <div class="fixed top-0 left-0 right-0 bg-gray-900 text-white p-4">
+        <div class="flex justify-center space-x-4">
+            <button id="btnRecommended">Recommended</button>
+            <button id="btnPopular">Popular</button>
+            <button id="btnNewlyReleased">Newly Released</button>
+            <button id="btnAllBooks">All Books</button>
+        </div>
+    </div>
+
+    <!-- RECOMMENDED HERO -->
+
+    <section id="recommended" class="bg-zinc-800 h-[55vh]">
+        <div class="h-full mx-[20%] flex place-content-around items-center gap-[43%]">
+            <div class="text-neutral-50 text-5xl font-extrabold flex flex-col gap-10">
+                <div class="flex gap-5">
+                    <div class="bg-neutral-50 h-30 w-5 mt-[-10px]"></div>
+                    <h1><span class="bg-neutral-50 text-neutral-950 px-1">This</span> week's recommended reading</h1>
+                </div>
+                <h2 class="text-center ">. . . . . .</h2>
+                <div class="flex flex-col gap-6 text-2xl font-medium text-end w-[95%]">
+                    <p class="text-3xl">The Catcher in the Rye</p>
+                    <p>By <span class="bg-neutral-50 text-neutral-950 p-3">J. D. Salinger</span></p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <img class="recommended-card-shadow rounded-md border-solid border-4 border-neutral-50" src="./img/The-Catcher-in-the-Rye-by-J.D.-Salinger.jpeg" alt="catcher-image">
+                <div class="flex items-center place-content-center gap-3">
+                    <img class="h-5" src="./img/star-of-life.png">
+                    <img class="h-5" src="./img/star-of-life.png">
+                    <img class="h-5" src="./img/star-of-life.png">
+                    <img class="h-5" src="./img/star-of-life.png">
+                    <img class="h-5" src="./img/star-of-life-empty.png">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- POPULAR THIS WEKK -->
+
+    <section id="popular" class="min-h-[80vh] mt-[5%] mx-[10%]">
+        <div class="flex flex-col">
+            <h1 class="my-16 text-neutral-950 text-5xl font-extrabold"><span class="bg-neutral-950 text-neutral-50 px-3">Popular</span> this week</h1>
+            <div class="flex gap-10">
+                <div class="w-[25%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/capa_neuromancer_aleph_jsan_gonzalez.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Neuromancer</p>
+                            <p>William Gibson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[25%]">
+                    <a href="#popupbook id=" id="cart"><img class="w-[100%] h-[85%] rounded cursor-pointer" src="./img/altered-carbon-book-cover.jpg"></a>
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Altered Carbon</p>
+                            <p>Richard Morgan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[25%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/annihilation.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Annihilation</p>
+                            <p>Jeff Vandermerr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[25%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/perdido street station.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Perdidio Street Station</p>
+                            <p>China Miéville</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWLY RELEASED -->
+
+    <section id="newly-released" class="min-h-[80vh] mt-[5%] mx-[10%]">
+        <div class="flex flex-col card_slider ">
+            <h1 class="my-16 text-neutral-950 text-5xl font-extrabold"><span class="bg-neutral-950 text-neutral-50 px-3">Newly</span> released</h1>
+            <div class="flex gap-10">
+                <div class="w-[25%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/department.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">The Department of Truth</p>
+                            <p>James Tynion IV</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[25%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/grimm.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Grimm' Fairy Tales</p>
+                            <p>Acob & Willhelm Grimm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[25%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/king-yellow.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">The King in Yellow</p>
+                            <p>R.W Chambers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[25%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/uzumaki.png">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Uzumaki</p>
+                            <p>Junji Ito</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    
+    <!-- ALL BOOKS -->
+
+    <section id="all-books" class="min-h-[80vh] mt-[5%] mx-[10%]">
+        <div class="flex flex-col">
+            <h1 class="my-16 text-neutral-950 text-5xl font-extrabold"><span class="bg-neutral-950 text-neutral-50 px-3">All</span> books</h1>
+            <div class="grid gap-10 grid-cols-4">
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/capa_neuromancer_aleph_jsan_gonzalez.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Neuromancer</p>
+                            <p>William Gibson</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/altered-carbon-book-cover.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Altered Carbon</p>
+                            <p>Richard Morgan</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/annihilation.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Annihilation</p>
+                            <p>Jeff Vandermerr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/perdido street station.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Perdidio Street Station</p>
+                            <p>China Miéville</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/department.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">The Department of Truth</p>
+                            <p>James Tynion IV</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/grimm.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Grimm' Fairy Tales</p>
+                            <p>Acob & Willhelm Grimm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/king-yellow.jpg">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">The King in Yellow</p>
+                            <p>R.W Chambers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[100%]">
+                    <img class="w-[100%] h-[85%] rounded" src="./img/uzumaki.png">
+                    <div class="mt-5 flex items-center place-content-between">
+                        <div class="bg-neutral-950 rotate-90 p-2 mt-5 ml-[-13px]">
+                            <p class="text-neutral-50">$18.99</p>
+                        </div>
+                        <div class="flex flex-col text-end">
+                            <p class="text-2xl font-medium">Uzumaki</p>
+                            <p>Junji Ito</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div  class="flex flex-row gap-10 mx-auto fixed top-32 left-60    justify-between p-10 items-center bg-white border border-gray-500 rounded-md max-w-screen-lg  transform scale-0  transition duration-700 ease-in-out" id="popupbook">
+        <div class="flex flex-col gap-4">
+            <img src="0_dYO0d9JDeGs8CWCp.jpg" alt="Book Cover" width="400" height="600">
+            <button class="w-56 py-2 px-4 bg-green-400 text-white rounded-md shadow-lg">Add To Cart</button>
+        </div>
+
+        <div>
+            <p class="text-xl font-semibold">The Hunger Games #1</p>
+            <h1 class="text-4xl font-bold">The Hunger Games</h1>
+            <p class="text-base">Suzanne Collins</p>
+
+            <p class="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate debitis temporibus alias voluptates pariatur in.</p><br>
+
+            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita accusamus autem doloremque magni ipsa. Aspernatur porro adipisci ducimus maiores reprehenderit mollitia aut.</p>
+
+            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint totam beatae dolor autem nihil quas qui consequuntur, corporis tempora magni reprehenderit accusantium.</p>
+
+            <div class="flex flex-row gap-4 mt-4">
+                <div><h5 class="text-xs">Genre</h5></div>
+                <div class="flex text-xs flex-row gap-2">
+                    <p>Adult</p>
+                    <p>Fiction</p>
+                    <p>Fantasy</p>
+                    <p>Dystopia</p>
+                    <p>Science</p>  
+                    <p>Romance</p>
+                    <p>Adventure</p>
+                    <p>...more</p>
+                </div>
+            </div>
+            <p class="text-xs mt-4">374 pages, Hardcover</p>
+            <p class="text-xs">First published September 14, 2008</p>
+        </div>
+        <div class="pb-96 cursor-pointe">
+            <a href="books.html"><img src="button ferme.png" alt="" width="25" height="25"></a>
+        </div>
+    </div>
+                 
+
+
+
+                 <script src="style.js"></script>
+                 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>

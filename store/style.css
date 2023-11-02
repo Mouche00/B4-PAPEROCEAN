@@ -1,0 +1,26 @@
+.recommended-card-shadow {
+    box-shadow: 9px 9px 0px 0px #000;
+}
+.img_box img {
+    max-width: 100% ;
+    
+}
+
+.slider_container .container{
+    padding: 0 15px;
+    max-width: 1230px ;
+    margin: 0 auto  ;
+}
+.card_slider{
+    padding: 50px 0;
+}
+.swiper-button-prev {
+    position: absolute;
+    margin-left: -10px;
+    top: 40%;
+}
+.swiper-button-next {
+    position: absolute;
+    top: 40%;
+    margin-right: 22px;
+}
