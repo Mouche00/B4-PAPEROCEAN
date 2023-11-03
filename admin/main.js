@@ -68,6 +68,8 @@ const bookDescription = document.querySelector("#book-description");
 const bookCat = document.querySelector("#book-category");
 const bookAut = document.querySelector("#book-author");
 const bookImage = document.querySelector("#image");
+const price = document.querySelector("#price");
+const qty = document.querySelector("#quantity");
 // mains
 const mainBook = document.querySelector("#main-books");
 // buttons
@@ -81,6 +83,8 @@ const bookSwitcher = document.querySelector("#books-btn");
 const bookForm = document.querySelector("#book-form");
 // misc
 const image = document.querySelector("#test-image");
+// regex
+const regex = /^[+]?([.]\d+|\d+([.]\d+)?)$/;
 
 let editInputs;
 let books = [];
@@ -232,6 +236,12 @@ const checkBook = () => {
     } else if (bookAut.value.trim().length == 0 && !(bookAut.style.display == "block")) {
         alert("ERROR: Book author cannot be empty");
         checkFlag = 1;
+    } else if ((bookAut.value.trim().length == 0 || !regex.test(price.value)) && !(bookAut.style.display == "block")) {
+        alert("ERROR: Book price cannot be empty or is not a positive number");
+        checkFlag = 1;
+    } else if ((bookAut.value.trim().length == 0 || !regex.test(qty.value)) && !(bookAut.style.display == "block")) {
+        alert("ERROR: Book quantity cannot be empty or is not a positive number");
+        checkFlag = 1;
     }
 
     books.forEach((book) => {
@@ -271,6 +281,13 @@ const addBook = () => {
             this.id = uid;
             this.isbn = isbn.value;
             this.title = title.value;
+            this.price = price.value;
+            this.qty = qty.value;
+            if (qty.value == 0){
+                this.disp = 0;
+            } else {
+                this.disp = 1;
+            }
             this.description = bookDescription.value;
             this.category = bookCat.value;
             this.author = bookAut.value;
@@ -321,6 +338,8 @@ const editBook = (searchID) => {
             bookDescription.value = book.description;
             bookCat.value = book.category;
             bookAut.value = book.author;
+            price.value = book.price;
+            qty.value = book.qty;
 
             editInputs = {
                 id: bId.placeholder,
@@ -328,7 +347,9 @@ const editBook = (searchID) => {
                 title: title.value,
                 description: bookDescription.value,
                 category: bookCat.value,
-                author: bookAut.value
+                author: bookAut.value,
+                price: price.value,
+                qty: qty.value
             };
         }
     });
@@ -349,7 +370,14 @@ const saveBook = (searchID) => {
             book.description = bookDescription.value;
             book.category = bookCat.value;
             book.author = bookAut.value;
-            book.image = imge;
+            book.price = price.value;
+            book.qty = qty.value;
+            if (qty.value == 0){
+                book.disp = 0;
+            } else {
+                book.disp = 1;
+            }
+
         }
     })
 
