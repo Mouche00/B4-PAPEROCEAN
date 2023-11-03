@@ -12,58 +12,217 @@
 </head>
 <body class="font-[Inter]">
     <nav></nav>
-    <section class="flex">
-        <div id="sidebar" class="h-screen bg-neutral-800 w-[20%]">
-            <div class="h-[45%] flex flex-col items-center place-content-between">
-                <div class="w-full mt-5 mb-5">
-                    <img class="mx-auto" src="../img/tempsnip-removebg-preview 2.png">
-                </div>
-                <div class="w-[60%] flex flex-col items-center place-content-between text-xl text-neutral-50 font-medium">
-                    <div class="w-full text-center p-5 border-white border-y-2 transition ease-in-out delay-150 hover:bg-neutral-50 hover:text-neutral-950">
-                        <button id="books-btn" class="w-full h-full" type="button">Books</button>
+    <section class="relative">
+        <div id="overlay" class="absolute w-full h-full bg-neutral-950 opacity-60 z-[2] hidden"></div>
+            <div class="flex">
+                <div id="sidebar" class="h-screen bg-neutral-800 w-[20%]">
+                    <div class="h-[45%] flex flex-col items-center place-content-between">
+                        <div class="w-full mt-5 mb-5">
+                            <img class="mx-auto" src="../img/tempsnip-removebg-preview 2.png">
+                        </div>
+                        <div class="w-[60%] flex flex-col items-center place-content-between text-xl text-neutral-50 font-medium">
+                            <div class="w-full text-center p-5 border-white border-y-2 transition ease-in-out delay-150 hover:bg-neutral-50 hover:text-neutral-950 active">
+                                <button id="books-btn" class="w-full h-full" type="button">Books</button>
+                            </div>
+                            <div class="w-full text-center p-5 border-white transition ease-in-out delay-150 hover:bg-neutral-50 hover:text-neutral-950">
+                                <button id="cat-btn" class="w-full h-full" type="button">Categories</button>
+                            </div>
+                            <div class="w-full text-center p-5 border-white transition ease-in-out delay-150 border-y-2 hover:bg-neutral-50 hover:text-neutral-950">
+                                <button id="aut-btn" class="w-full h-full" type="button">Authors</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-full text-center p-5 border-white transition ease-in-out delay-150 hover:bg-neutral-50 hover:text-neutral-950">
-                        <button id="cat-btn" class="w-full h-full" type="button">Categories</button>
+                </div>
+                <div id="main" class="w-[80%] relative">
+                    <div id="main-books">
+                        <div id="main-books-table" class="w-[90%] m-auto mt-8">
+                            <div id="main-books-bar" class="flex place-content-between items-center m-8 mx-0">
+                                <div class="flex gap-1 items-center">
+                                    <button id="display-book-form-btn" class="bg-green-700 text-neutral-50 rounded w-10 h-10" type="button">+</button>
+                                    <button id="remove-books-btn" class="bg-red-700 text-neutral-50 rounded w-40 h-10" type="button">Remove All Books</button>
+                                </div>
+                            </div>
+                            <div id="main-books-content">
+                                <table class="w-full border-collapse border-2">
+                                    <thead>
+                                        <tr class="bg-neutral-700 text-neutral-50 rounded-lg">
+                                            <th class="border-collapse border-2">ID</th>
+                                            <th class="border-collapse border-2">ISBN</th>
+                                            <th class="border-collapse border-2">Title</th>
+                                            <th class="border-collapse border-2">Category</th>
+                                            <th class="border-collapse border-2">Author</th>
+                                            <th class="border-collapse border-2 w-[20%]">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="books-wrapper">
+                                        <!-- <tr>
+                                            <td class="border-collapse border-2">ID</th>
+                                            <td class="border-collapse border-2">Title</th> 
+                                            <td class="border-collapse border-2">ISBN</th>
+                                            <td class="border-collapse border-2 flex place-content-end gap-1">
+                                                <button type="button" class="bg-orange-500 text-neutral-50 rounded w-[50%] h-10">Edit</button>
+                                                <button type="button" class="bg-red-700 text-neutral-50 rounded w-[50%] h-10">Delete</button>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="w-full text-center p-5 border-white transition ease-in-out delay-150 border-y-2 hover:bg-neutral-50 hover:text-neutral-950">
-                        <button id="aut-btn" class="w-full h-full" type="button">Authors</button>
+                    <div id="main-categories" class="hidden">
+                        <div id="main-categories-table" class="w-[90%] m-auto mt-8">
+                            <div id="main-categories-bar" class="flex place-content-between items-center m-8 mx-0">
+                                <div class="flex gap-1 items-center">
+                                    <button id="display-cat-form-btn" class="bg-green-700 text-neutral-50 rounded w-10 h-10" type="button">+</button>
+                                    <button id="remove-all-cat-btn" class="bg-red-700 text-neutral-50 rounded w-52 h-10" type="button">Remove All categories</button>
+                                </div>
+                            </div>
+                            <div id="main-categories-content">
+                                <table class="w-full border-collapse border-2">
+                                    <thead>
+                                        <tr class="bg-neutral-700 text-neutral-50 rounded-lg">
+                                            <th class="border-collapse border-2">ID</th>
+                                            <th class="border-collapse border-2">Name</th>
+                                            <th class="border-collapse border-2">Description</th>
+                                            <th class="border-collapse border-2 w-[20%]">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="cat-wrapper">
+                                        <!-- <tr>
+                                            <td class="border-collapse border-2">ID</th>
+                                            <td class="border-collapse border-2">Title</th> 
+                                            <td class="border-collapse border-2">ISBN</th>
+                                            <td class="border-collapse border-2 flex place-content-end gap-1">
+                                                <button type="button" class="bg-orange-500 text-neutral-50 rounded w-[50%] h-10">Edit</button>
+                                                <button type="button" class="bg-red-700 text-neutral-50 rounded w-[50%] h-10">Delete</button>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div id="main" class="w-[80%]">
-            <div id="main-books">
-                <div id="main-books-bar" class="flex place-content-between items-center m-4">
-                    <div></div>
-                    <h1 class="text-5xl font-bold">Books Table</h1>
-                    <button class="bg-green-700 text-neutral-50 rounded w-32 h-10" type="button">Add Books</button>
-                </div>
-                <div id="main-books-table">
-
-                </div>
-                <div style="display: block;" id="main-boos-form">
-                    <form action="" class="flex flex-col items-center place-content-evenly border-2 border-gray w-[40%] mx-auto h-[40vh] rounded">
-                        <h1 class="text-2xl font-bold">Add Books</h1>
-                        <div class="w-[90%] flex place-content-between items-center">
-                            <label>Id:</label>
-                            <input class="w-[80%] bg-neutral-200 h-10 px-2" type="text" id="id" placeholder="1315168151" disabled>
+                    <div id="main-authors" class="hidden">
+                        <div id="main-authors-table" class="w-[90%] m-auto mt-8">
+                            <div id="main-authors-bar" class="flex place-content-between items-center m-8 mx-0">
+                                <div class="flex gap-1 items-center">
+                                    <button id="display-aut-form-btn" class="bg-green-700 text-neutral-50 rounded w-10 h-10" type="button">+</button>
+                                    <button id="remove-all-aut-btn" class="bg-red-700 text-neutral-50 rounded w-52 h-10" type="button">Remove All Authors</button>
+                                </div>
+                            </div>
+                            <div id="main-authors-content">
+                                <table class="w-full border-collapse border-2">
+                                    <thead>
+                                        <tr class="bg-neutral-700 text-neutral-50 rounded-lg">
+                                            <th class="border-collapse border-2">ID</th>
+                                            <th class="border-collapse border-2">Name</th>
+                                            <th class="border-collapse border-2">Genre</th>
+                                            <th class="border-collapse border-2 w-[20%]">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="aut-wrapper">
+                                        <!-- <tr>
+                                            <td class="border-collapse border-2">ID</th>
+                                            <td class="border-collapse border-2">Title</th> 
+                                            <td class="border-collapse border-2">ISBN</th>
+                                            <td class="border-collapse border-2 flex place-content-end gap-1">
+                                                <button type="button" class="bg-orange-500 text-neutral-50 rounded w-[50%] h-10">Edit</button>
+                                                <button type="button" class="bg-red-700 text-neutral-50 rounded w-[50%] h-10">Delete</button>
+                                            </td>
+                                        </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                        <div class="w-[90%] flex place-content-between items-center">
-                            <label>ISBN:</label>
-                            <input class="w-[80%] bg-neutral-100 h-10 px-2" type="text" id="isbn" placeholder="9780345538376">
+                    </div>
+                    <div style="transform: translateX(-50%);" id="main-form" class="left-2/4 hidden absolute z-[3]">
+                        <div action="" class="border-1 border-gray-700 w-[35vw] mx-auto h-[60vh] rounded bg-neutral-50">
+                            <div class="w-full h-[10%] bg-neutral-700 p-2 text-center rounded-t mb-5"></div>
+                            <form id="book-form" class="flex flex-col items-center place-content-evenly gap-1 h-[90%]">
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>ID:</label>
+                                    <input class="w-[80%] bg-neutral-500 h-10 p-2 placeholder-white rounded" type="text" id="book-id" placeholder="" disabled>
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>ISBN:</label>
+                                    <input class="w-[80%] bg-neutral-300 h-10 p-2 rounded" type="text" id="isbn" placeholder="">
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Title:</label>
+                                    <input class="w-[80%] bg-neutral-300 h-10 p-2 rounded" type="text" id="title" placeholder="">
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Description:</label>
+                                    <textarea id="book-description" class="w-[80%] bg-neutral-300 h-20 p-2 rounded" placeholder=""></textarea>
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Category:</label>
+                                    <select class="w-[80%] bg-neutral-300 h-10 p-2 rounded" name="book-category" id="book-category"></select>   
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Author:</label>
+                                    <select class="w-[80%] bg-neutral-300 h-10 p-2 rounded" name="book-author" id="book-author"></select>   
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Image:</label>
+                                    <input class="w-[40%] bg-neutral-300 h-10 p-2 rounded" type="file" id="image" placeholder="">
+                                    <img src="" id="test-image" class="">
+                                </div>
+                                <div class="w-[90%] flex place-content-end items-center gap-1 my-5">
+                                    <input type="submit" id="main-books-form-save" class="cursor-pointer bg-green-700 text-neutral-50 rounded w-24 h-10 hidden" value="Save">
+                                    <input type="submit" id="main-books-form-submit" class="cursor-pointer bg-green-700 text-neutral-50 rounded w-24 h-10" value="Add">
+                                    <input type="reset" id="main-books-form-reset" class="cursor-pointer bg-neutral-600 text-neutral-50 rounded w-24 h-10" value="Reset">
+                                </div>
+                            </form>
+                            <form id="category-form" class="hidden flex flex-col items-center place-content-evenly h-[90%]">
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>ID:</label>
+                                    <input class="w-[80%] bg-neutral-500 h-10 p-2 placeholder-white rounded" type="text" id="cat-id" placeholder="" disabled>
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Name:</label>
+                                    <input class="w-[80%] bg-neutral-300 h-10 p-2 rounded" type="text" id="cat-name" placeholder="">
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Description:</label>
+                                    <textarea id="cat-description" class="w-[80%] bg-neutral-300 h-20 p-2 rounded" placeholder=""></textarea>
+                                </div>
+                                <div class="w-[90%] flex place-content-end items-center gap-1">
+                                    <input type="submit" id="main-cat-form-save" class="cursor-pointer bg-green-700 text-neutral-50 rounded w-24 h-10 hidden" value="Save">
+                                    <input type="submit" id="main-cat-form-submit" class="cursor-pointer bg-green-700 text-neutral-50 rounded w-24 h-10" value="Add">
+                                    <input type="reset" id="main-cat-form-reset" class="cursor-pointer bg-neutral-600 text-neutral-50 rounded w-24 h-10" value="Reset">
+                                </div>
+                            </form>
+                            <form id="author-form" class="hidden flex flex-col items-center place-content-evenly h-[90%]">
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>ID:</label>
+                                    <input class="w-[80%] bg-neutral-500 h-10 p-2 placeholder-white rounded" type="text" id="aut-id" placeholder="" disabled>
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Name:</label>
+                                    <input class="w-[80%] bg-neutral-300 h-10 p-2 rounded" type="text" id="aut-name" placeholder="">
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Genre:</label>
+                                    <select class="w-[80%] bg-neutral-300 h-10 p-2 rounded" name="author-category" id="author-genre">
+                                        <option value="non-fiction">Non-Fiction</option>
+                                        <option value="fiction">Fiction</option>
+                                        <option value="novelist">Novelist</option>
+                                        <option value="poet">Poet</option>
+                                    </select>
+                                </div>
+                                <div class="w-[90%] flex place-content-end items-center gap-1">
+                                    <input type="submit" id="main-aut-form-save" class="cursor-pointer bg-green-700 text-neutral-50 rounded w-24 h-10 hidden" value="Save">
+                                    <input type="submit" id="main-aut-form-submit" class="cursor-pointer bg-green-700 text-neutral-50 rounded w-24 h-10" value="Add">
+                                    <input type="reset" id="main-aut-form-reset" class="cursor-pointer bg-neutral-600 text-neutral-50 rounded w-24 h-10" value="Reset">
+                                </div>
+                            </form>
                         </div>
-                        <div class="w-[90%] flex place-content-between items-center">
-                            <label>Title:</label>
-                            <input class="w-[80%] bg-neutral-100 h-10 px-2" type="text" id="title" placeholder="The Lord Of The Rings">
-                        </div>
-                        <div class="w-[90%] flex place-content-between items-center">
-                            <label>Description:</label>
-                            <textarea id="description" class="w-[80%] bg-neutral-100 h-20 px-2" placeholder="When Thorin Oakenshield and his band of dwarves embark upon a dangerous quest to reclaim the hoard of gold... "></textarea>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="main.js"></script>
 </body>
 </html>
