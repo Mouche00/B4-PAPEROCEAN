@@ -3,34 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     
 
     <title>Document</title>
 </head>
-<body class="bg-gray-200">
+<body>
+
+            <!--Nav-bar-->
+
     <div class="container mx-auto px-10">
+        <div class="flex place-content-between">
+            <img src="tempsnip-removebg-preview 2.png" alt="" width="70px" height="50px">
+            <ul class="flex flex space-x-16 text-xl m-4 text-center items-center">
+                <li class="bg-transparent  hover:text-white hover:bg-black rounded-3xl transition ease-out duration-700 h-8 w-32"><a href="index.html">Home</a></li>
+                <li class="bg-transparent  hover:text-white hover:bg-black rounded-3xl transition ease-out duration-700 h-8 w-32 "><a href="books.html"> Books</a></li>
+                <li class="bg-transparent  hover:text-white hover:bg-black rounded-3xl transition ease-out duration-700 h-8 w-32"><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="flex ml-10 h-8 m-4 gap-7">
+            <img class="cursor-pointer" src="basket-cart-icon-27 1.png" alt="">
+            <img class="cursor-pointer" src="OIP-removebg-preview 1.png" alt="" width="30" height="20">
+            </div>
+        </div>
 
-        <div class="flex justify-between ">
-            <div><img src="tempsnip-removebg-preview 2.png" alt="" width="70px" height="50px"></div>
-            <div><img class="mt-5" src="button ferme.png" alt="" width="20" height="20"></div>
-         </div>
-         <h3 class="mt-20" class="font-extrabold"><b>builling details </b> </h3><br><br>
+    </div>
 
-         <div class="form">
+                            <!--Container-->
+
+    <div id="back" class="container mx-auto px-10 flex">
+
+        
+        
+
+         <div class="form  bg-gray-100 bg-opacity-50 w-5/12">
+            <h3 class="mt-20 text-4xl font-serif"><b>BUILLING DETAILS </b> </h3><br><br>
             <form id="form">
-                        <label for="fname">First & Last name</label><br>
+                        <label class="text-xl" for="fname">First & Last name</label><br>
                         
-                        <input  class="border-2 border-neutral-950 border-opacity-100  w-96"  type="text" id="fname" name="fname" placeholder="First & Last name">
+                        <input  class=" rounded-lg border-4 border-black-500 shadow-md px-4 py-1   w-full	"  type="text" id="fname" name="fname" >
                         <p class="text-red-500" id="nameError"> </p><br><br>
 
-                        <label for="email">Email Adress</label><br>
+                        <label class="text-xl" for="email">Email Adress</label><br>
                         
-                        <input  class="border-2 border-neutral-950 border-opacity-100 w-96" type="text" id="email" name="email" placeholder="Email Adress">
+                        <input  class=" px-4 py-1 rounded-lg border-4 border-black-500 shadow-md w-full" type="text" id="email" name="email" >
                         <p class="text-red-500" id="emailError"> </p><br><br>
 
-                        <label for="country">Country</label><br>
-                        <select  class="border-2 border-neutral-950 border-opacity-100 w-96 " name="" id="">
+                        <label class="text-xl" for="country">Country</label><br>
+                        <select  class=" px-4 py-1 rounded-lg border-4 border-black-500 shadow-md w-full " name="" id="">
                         <option value="Morocco">Morocco</option>
                         <option value="Austria">Austria</option>
                         <option value="Mexico">Mexico</option>
@@ -47,32 +67,32 @@
             
             <div class="flex space-x-4">
                 <div>
-                    <label for="state/country">state/country</label><br>
-                    <input  class="border-2 border-neutral-950 border-opacity-100" type="text" id="statecountry" name="state/country">
+                    <label class="text-xl" for="state/country">state/country</label><br>
+                    <input  class=" px-4 py-1 rounded-lg border-4 border-black-500 shadow-md w-72" type="text" id="statecountry" name="state/country">
                     <p class="text-red-500" id="statecountryError"> </p><br><br>
                 </div>    
                 <div>
-                        <label for="Zip/postal code">Zip/postal code</label><br>
-                        <input  class="border-2 border-neutral-950 border-opacity-100" type="text" id="zippostal" name="Zip/postal code">
+                        <label class="text-xl" for="Zip/postal code">Zip/postal code</label><br>
+                        <input  class=" px-4 py-1 rounded-lg border-4 border-black-500 shadow-md w-72" type="text" id="zippostal" name="Zip/postal code">
                         <p class="text-red-500" id="zippostalError"> </p><br><br>
                     </div>
             </div>
-            <h3 class="mt-20" class="font-extrabold"><b>Payment method </b></h3><br>
-            <select  class="border-2 border-neutral-950 border-opacity-100 w-96" name="" id="">
-                <label for="Credit Cart">Credit Cart</label>
+            <h3 class="mt-20 text-4xl font-serif"><b>PAYMENT METHODE</b></h3><br>
+            <select  class="  px-4 py-1 rounded-lg border-4 border-black-500 shadow-md w-full" name="" id="">
+                <label class="text-xl" for="Credit Cart">Credit Cart</label>
                 <option value="Credit Card">Credit Card</option>
                 <option value="Visa">Visa</option>
                 <option value="MasterCard">MasterCard</option>  
             </select><br><br>
-            <label for="Card number">Card number</label><br>
-            <input  class="border-2 border-neutral-950 border-opacity-100 w-96" type="text" id="cardnumber" name="Card number" placeholder="5489 4887 123 6544">
+            <label class=" text-xl" for="Card number">Card number</label><br>
+            <input  class=" px-4 py-1 rounded-lg border-4 border-black-500 shadow-md  w-full" type="text" id="cardnumber" name="Card number" >
             <p class="text-red-500" id="cardnumberError"> </p><br><br>
 
             <div class="flex space-x-4">
             <div>
-            <label for="Expiration date">Expiration date</label><br>
-            <select  class="border-2 border-neutral-950 border-opacity-100" name="" id="">
-                <option value="Mounth">Mounth</option>
+            <label class="text-xl" for="Expiration date">Expiration date</label><br>
+            <select  class=" px-4 py-1 rounded-lg border-4 border-black-500 shadow-md w-44" name="" id="">
+                <option  value="Mounth">Mounth</option>
                 <option value="January">January</option>
                 <option value="February">February</option>  
                 <option value="March">March</option>
@@ -89,7 +109,7 @@
             </div>
             <div>
                 <div class="mt-6">
-                <select class="border-2 border-neutral-950 border-opacity-100"  name="" id="">
+                <select class=" px-4 py-1  mt-1 rounded-lg border-4 border-black-500 shadow-md w-44"  name="" id="">
                     <option value="Year">Year</option>
                     <option value="2023">2023</option>
                     <option value="2024">2024</option>  
@@ -103,19 +123,40 @@
             </div>
         </div>
             <div>
-                <label for="Security code">Security code</label><br>
-                <input class="border-2 border-neutral-950 border-opacity-100" type="text" id="threedigits" name="Three digits" placeholder="Three digits">
+                <label class="text-xl" for="Security code">Security code</label><br>
+                <input class=" px-4 py-1 rounded-lg border-4 border-black-500 shadow-md w-42" type="text" id="threedigits" name="Three digits" >
                 <p class="text-red-500" id="threedigitsError"> </p><br><br><br>
             </div>
             </div>
-            <label for="optional">(optional)</label><br>
-            <input  class="border-2 border-neutral-950 border-opacity-100 w-96" type="text" id="paypal" name="Card number" placeholder="PayPal">
+            <label class="text-xl" for="optional">(optional)</label><br>
+            <input  class=" px-4 py-1 text-xl rounded-lg border-4 border-black-500 shadow-md w-full" type="text" id="paypal" name="Card number" placeholder="PayPal">
             <p class="text-red-500" id="paypalError"> </p><br><br>
-            <p class="text-sm">By clicking the button you agree to the Terms and Conditions</p><br>
-            <button class="border-2 border-neutral-950 border-opacity-100 w-96 bg-green-500 text-white" type="submit" class="click"><b>Order Now</b></button>
+            <p class="text-xm px-6">By clicking the button you agree to the Terms and Conditions</p><br>
+            <button class="  px-4 py-1 rounded-lg border-4 border-black-600 bg-gray-300 shadow-md w-full text-gray-400 text-gray-900 transition ease-in duration-700 hover:bg-green-400 font-serif" type="submit" class="click"><b>Order Now</b></button>
 
 </form>
          </div>
+
+
+            <div class=" bg-gray-100 bg-opacity-50 w-5/12">
+                <h1>Cart Summary</h1>
+                    <div class="flex">
+                      <p>1 x Moker The Agency Theme</p>
+                      <p><b>$00.00</b></p>
+                    </div>
+                    <div class="h-1 w-full"></div>
+                    <div class="flex">
+                        <p>1 x Moker The Agency Theme</p>
+                        <p><b>$00.00</b></p>
+                      </div>
+                      <div class="h-1 w-full"></div>
+                       <div class="flex">
+                        <p>1 x Moker The Agency Theme</p>
+                        <p><b>$00.00</b></p>
+                      </div>
+                      <div class="h-1 w-full"></div>
+                      <h3>Total: $000.00</h3>
+            </div>
 
     </div>
 
