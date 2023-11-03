@@ -9,48 +9,137 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="flex flex-col items-center justify-around md:flex-row gap-20 md:gap-0">
-    <div class="bg-green-50 rounded-lg border-4 border-green-100 text-xs  shadow-xl w-2/4 md:w-1/4 items-center ">
-        <h6 class=" px-10 py-5">REJOIGNEZ NOTRE<br>NEWSLETTER</h6>
-        <h1 class="text-3xl px-10 font-serif"><b>Lore ipsum dolor sitamet consectetur adipisicing<br>elit. Nemo,
-                est!</b> </h1><br>
-        <p class="px-10">3045 10 sunrize Avenue, 123-456-7890</p>
-        <p class="px-10">Lun-ven: 9h00 - 20h00.</p>
-        <p class="px-10">Sam-Dim: 9h00 - 22h00</p>
-        <p class="px-10">@esbnyc.com</p><br>
-        <h1 class="text-lg px-10 font-serif">Suivez nous</h1>
-        <div class="flex flex-row gap-1 px-10">
-            <div><img src="fb.jpg" alt="" width="20" height="20"></div>
-            <div><img src="twitter.jpg" alt="" width="20" height="20"></div>
-            <div><img src="whatssap.jpg" alt="" width="20" height="20"></div>
-            <div><img src="ytb.jpg" alt="" width="20" height="20"></div>
+<body class="flex flex-col items-center justify-around gap-20 md:gap-0">
+
+    <div id="mobile-nav" class=" hidden absolute text-center text-lg  mt-20 bg-black w-full text-white ">
+        <ul>
+            <li
+                class="md:bg-transparent  md:hover:text-black md:hover:bg-white md:rounded-3xl md:transition ease-out duration-700 md:h-8 md:w-32">
+                <a href="../index.html"><b>Home</b> </a>
+            </li>
+            <li
+                class="md:bg-transparent  md:hover:text-white md:hover:bg-black md:rounded-3xl md:transition ease-out duration-700 md:h-8 md:w-32 ">
+                <a href="#"><b> Books </b></a>
+            </li>
+            <li
+                class="md:bg-transparent  md:hover:text-white md:hover:bg-black md:rounded-3xl md:transition ease-out duration-700 md:h-8 md:w-32">
+                <a href="../contact/contact.html"><b>Contact Us</b> </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container mx-auto px-10">
+        <div class="flex place-content-between">
+            <img src="../tempsnip-removebg-preview 2.png" alt="" width="70px" height="50px">
+            <ul class="flex flex space-x-16 text-xl m-4 text-center items-center">
+                <li
+                    class="bg-transparent  hover:text-white hover:bg-black rounded-3xl transition ease-out duration-700 h-8 w-32">
+                    <a href="../index.html">Home</a></li>
+                <li
+                    class="bg-transparent  hover:text-white hover:bg-black rounded-3xl transition ease-out duration-700 h-8 w-32 ">
+                    <a href="store.html"> Books</a></li>
+                <li
+                    class="bg-transparent  hover:text-white hover:bg-black rounded-3xl transition ease-out duration-700 h-8 w-32">
+                    <a href="../contact/contact.html">Contact Us</a></li>
+            </ul>
+            <div class="flex ml-10 h-8 m-4 gap-7">
+                <a href="#popup id=" id="panier"><img class="cursor-pointer" src="../basket-cart-icon-27 1.png" alt=""
+                        width="30" height="20"></a>
+                <a href="../admin/admin.html"><img class="cursor-pointer" src="../OIP-removebg-preview 1.png" alt="" width="30" height="20"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex items-center justify-center h-[50%]">
+        <div class="bg-green-50 rounded-lg border-4 border-green-100 text-xs  shadow-xl w-2/4 md:w-1/4 items-center h-[50%]">
+            <h6 class=" px-10 py-5">REJOIGNEZ NOTRE<br>NEWSLETTER</h6>
+            <h1 class="text-3xl px-10 font-serif"><b>Lore ipsum dolor sitamet consectetur adipisicing<br>elit. Nemo,
+                    est!</b> </h1><br>
+            <p class="px-10">3045 10 sunrize Avenue, 123-456-7890</p>
+            <p class="px-10">Lun-ven: 9h00 - 20h00.</p>
+            <p class="px-10">Sam-Dim: 9h00 - 22h00</p>
+            <p class="px-10">@esbnyc.com</p><br>
+            <h1 class="text-lg px-10 font-serif">Suivez nous</h1>
+            <div class="flex flex-row gap-1 px-10">
+                <div><img src="fb.jpg" alt="" width="20" height="20"></div>
+                <div><img src="twitter.jpg" alt="" width="20" height="20"></div>
+                <div><img src="whatssap.jpg" alt="" width="20" height="20"></div>
+                <div><img src="ytb.jpg" alt="" width="20" height="20"></div>
 
 
 
+            </div>
+        </div>
+        <div id="form" class="bg-white  md:h-screen flex items-center justify-center w-[50%]">
+            <form id="contactForm" class="max-w-md w-full bg-gray-200 p-8 rounded-md shadow-lg ml-300">
+                <h1 class="text-2xl font-bold text-center">CONTACT US</h1>
+                <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                    type="text" id="firstname" placeholder="First Name" />
+                <p id="msgErrorFirstName" class="text-red-500"></p>
+                <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                    type="text" id="lastname" placeholder="Last Name" />
+                <p id="msgErrorLastName" class="text-red-500"></p>
+                <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                    type="text" id="email" placeholder="Email" />
+                <p id="msgErrorEmail" class="text-red-500"></p>
+                <div class="my-4">
+                    <textarea placeholder="Message"
+                        class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="center mt-4 flex justify-center">
+                    <input type="submit" value="Send Message"
+                        class="w-full max-w-xs bg-green-300 text-lg p-2 rounded-md cursor-pointer">
+                </div>
+            </form>
         </div>
     </div>
-    <div id="form" class="bg-white  md:h-screen flex items-center justify-center w-[50%]">
-        <form id="contactForm" class="max-w-md w-full bg-gray-200 p-8 rounded-md shadow-lg ml-300">
-            <h1 class="text-2xl font-bold text-center">CONTACT US</h1>
-            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                type="text" id="firstname" placeholder="First Name" />
-            <p id="msgErrorFirstName" class="text-red-500"></p>
-            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                type="text" id="lastname" placeholder="Last Name" />
-            <p id="msgErrorLastName" class="text-red-500"></p>
-            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                type="text" id="email" placeholder="Email" />
-            <p id="msgErrorEmail" class="text-red-500"></p>
-            <div class="my-4">
-                <textarea placeholder="Message"
-                    class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+
+    <footer class="w-[100vw]">
+        <div class="footer bg-gray-900 text-pink-100 h-50 border-8 border-pink-100">
+            <div class="flex justify-between mx-auto px-10 pt-10">
+
+                <div>
+                    <div class="flex">
+                        <div>
+                            <h1><b>OCEANPAPER</b> </h1>
+                        </div>
+                    </div>
+
+                    <div class="mt-2 text-sm">
+                        <p>Email: info@OCEANPAPER.com</p>
+                        <p>Address: 123 Bookwram</p>
+                        <p>LaneLibraryville,Bookland</p>
+                    </div>
+                </div>
+
+
+                <div>
+
+
+                    <div class="flex mt-20 ml-10 flex-row gap-2 cursor-pointer">
+                        <div><img src="assets/img/icons8-facebook-50.png" alt="" width="30" height="30"></div>
+                        <div><img src="assets/img/icons8-instagram-50.png" alt="" width="30" height="30"></div>
+                        <div><img src="assets/img/icons8-pinterest-50.png" alt="" width="30" height="30"></div>
+                        <div><img src="assets/img/icons8-snapchat-50.png" alt="" width="30" height="30"></div>
+                        <div><img src="assets/img/icons8-twitter-50.png" alt="" width="30" height="30"></div>
+                        <div><img src="assets/img/icons8-youtube-50.png" alt="" width="30" height="30"></div>
+                    </div>
+                </div>
+
+
+                <div>
+                    <div class="text-xs">
+                        <p><b>COPYRIGHT&copy;2023 PAPEROCEAN.COM. </b></p>
+                        <P class="text-center"><b>ALL RIGHTS RESERVED </b></P>
+                    </div>
+                    <div class="flex flex-col items-center"><img class="" src="assets/img/logocean.png" alt=""
+                            width="100" height="80"></div>
+                </div>
+
             </div>
-            <div class="center mt-4 flex justify-center">
-                <input type="submit" value="Send Message"
-                    class="w-full max-w-xs bg-green-300 text-lg p-2 rounded-md cursor-pointer">
-            </div>
-        </form>
-    </div>
+            <h2 class="text-center bg-black mt-5"><b>&#9830; 2013-2023 &#9830; </b></h2>
+        </div>
+    </footer>
 
     <script src="js/contact.js"></script>
 </body>
