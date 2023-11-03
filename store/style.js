@@ -294,3 +294,15 @@ const createCart = (id, title, price, qty) => {
 
     cartWrapper.insertBefore(cartContainer, cartWrapper.firstChild);
 }
+
+const search = document.getElementById("search");
+
+search.addEventListener("input", () => {
+    booksWrapper.innerHTML = "";
+
+    books.forEach((book, i) => {
+        if(book.title.includes(search.value)) {
+            createBook(i, book.title, book.author, book.image, book.price);
+        }
+    })
+})
