@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="flex flex-col items-center justify-around md:flex-row gap-20 md:gap-0">
+    <div class="bg-green-50 rounded-lg border-4 border-green-100 text-xs  shadow-xl w-2/4 md:w-1/4 items-center ">
+        <h6 class=" px-10 py-5">REJOIGNEZ NOTRE<br>NEWSLETTER</h6>
+        <h1 class="text-3xl px-10 font-serif"><b>Lore ipsum dolor sitamet consectetur adipisicing<br>elit. Nemo,
+                est!</b> </h1><br>
+        <p class="px-10">3045 10 sunrize Avenue, 123-456-7890</p>
+        <p class="px-10">Lun-ven: 9h00 - 20h00.</p>
+        <p class="px-10">Sam-Dim: 9h00 - 22h00</p>
+        <p class="px-10">@esbnyc.com</p><br>
+        <h1 class="text-lg px-10 font-serif">Suivez nous</h1>
+        <div class="flex flex-row gap-1 px-10">
+            <div><img src="fb.jpg" alt="" width="20" height="20"></div>
+            <div><img src="twitter.jpg" alt="" width="20" height="20"></div>
+            <div><img src="whatssap.jpg" alt="" width="20" height="20"></div>
+            <div><img src="ytb.jpg" alt="" width="20" height="20"></div>
+
+
+
+        </div>
+    </div>
+    <div id="form" class="bg-white  md:h-screen flex items-center justify-center w-[50%]">
+        <form id="contactForm" class="max-w-md w-full bg-gray-200 p-8 rounded-md shadow-lg ml-300">
+            <h1 class="text-2xl font-bold text-center">CONTACT US</h1>
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                type="text" id="firstname" placeholder="First Name" />
+            <p id="msgErrorFirstName" class="text-red-500"></p>
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                type="text" id="lastname" placeholder="Last Name" />
+            <p id="msgErrorLastName" class="text-red-500"></p>
+            <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                type="text" id="email" placeholder="Email" />
+            <p id="msgErrorEmail" class="text-red-500"></p>
+            <div class="my-4">
+                <textarea placeholder="Message"
+                    class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+            </div>
+            <div class="center mt-4 flex justify-center">
+                <input type="submit" value="Send Message"
+                    class="w-full max-w-xs bg-green-300 text-lg p-2 rounded-md cursor-pointer">
+            </div>
+        </form>
+    </div>
+
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

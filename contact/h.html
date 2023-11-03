@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex justify-center">
+        <div id="form" class="bg-white flex items-center justify-center p-8">
+            <form id="contactForm" class="max-w-xl w-full bg-gray-200 p-8 rounded-md shadow-lg">
+                <h1 class="text-2xl font-bold text-center">CONTACT US</h1>
+                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="text" id="firstname" placeholder="First Name"/>
+                    <p id="msgErrorFirstName" class="text-red-500"></p>
+                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="text" id="lastname" placeholder="Last Name" />
+                    <p id="msgErrorLastName" class="text-red-500"></p>
+                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                        type="email" id="email" placeholder="Email" />
+                    <p id="msgErrorEmail" class="text-red-500"></p>
+                    <div class="my-4">
+                        <textarea placeholder="Message" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                    <div class="center mt-4 flex justify-center">
+                        <input type="submit" value="Send Message" class="w-full max-w-xs bg-green-300 text-lg p-2 rounded-md cursor-pointer">
+                    </div>
+            </form>
+        </div>
+
+               <div class="max-w-2xl mx-auto">
+            <div class="bg-gray-100 shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+                    <a href="#">
+                        <img class="rounded-t-lg p-8" src="colleen.jpg" alt="product image">
+                    </a>
+                        <div class="px-5 pb-5">
+                            <a href="#">
+                                <h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">Colleen hoover most popular books is here</h3>
+                            </a>
+            
+                            <div class="flex items-center justify-between">
+                                <span class="text-3xl font-bold text-gray-900 dark:text-white">$99</span>
+                                <a href="#"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+                                    to cart</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
+
