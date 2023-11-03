@@ -135,8 +135,8 @@
                             </div>
                         </div>
                     </div>
-                    <div style="transform: translateX(-50%);" id="main-form" class="left-2/4 hidden absolute z-[3]">
-                        <div action="" class="border-1 border-gray-700 w-[35vw] mx-auto h-[60vh] rounded bg-neutral-50">
+                    <div style="transform: translate(-50%);" id="main-form" class="left-2/4 hidden absolute z-[3]">
+                        <div action="" class="border-1 border-gray-700 w-[35vw] mx-auto h-[70vh] rounded bg-neutral-50">
                             <div class="w-full h-[10%] bg-neutral-700 p-2 text-center rounded-t mb-5"></div>
                             <form id="book-form" class="flex flex-col items-center place-content-evenly gap-1 h-[90%]">
                                 <div class="w-[90%] flex place-content-between items-center">
@@ -165,8 +165,17 @@
                                 </div>
                                 <div class="w-[90%] flex place-content-between items-center">
                                     <label>Image:</label>
-                                    <input class="w-[40%] bg-neutral-300 h-10 p-2 rounded" type="file" id="image" placeholder="">
-                                    <img src="" id="test-image" class="">
+                                    <input class="w-[80%] h-10 p-2 rounded" type="file" id="image" placeholder="">
+                                    <img src="" id="test-image" class="hidden">
+                                </div>
+                                
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Price:</label>
+                                    <input class="w-[80%] bg-neutral-300 h-10 p-2 rounded" type="text" id="price" placeholder="">
+                                </div>
+                                <div class="w-[90%] flex place-content-between items-center">
+                                    <label>Qte:</label>
+                                    <input class="w-[80%] bg-neutral-300 h-10 p-2 rounded" type="text" id="quantity" placeholder="">
                                 </div>
                                 <div class="w-[90%] flex place-content-end items-center gap-1 my-5">
                                     <input type="submit" id="main-books-form-save" class="cursor-pointer bg-green-700 text-neutral-50 rounded w-24 h-10 hidden" value="Save">

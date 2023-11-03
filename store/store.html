@@ -15,7 +15,6 @@
 
 <body class="font-['inter'] relative">
 
-    <!--Nav Bar-->
     <div id="mobile-nav" class=" hidden absolute text-center text-lg  mt-20 bg-black w-full text-white ">
         <ul>
             <li
@@ -125,9 +124,9 @@
 
 
     <!-- POPULAR THIS WEKK -->
-    <h1 class="my-16 text-neutral-950 text-5xl font-extrabold ml-40 mt-52"><span
+    <h1 class="my-16 text-neutral-950 text-5xl font-extrabold ml-40 mt-52 hidden"><span
             class="bg-neutral-950 text-neutral-50 px-3">Popular</span> this week</h1>
-    <section class="slider_container">
+    <section class="slider_container hidden" >
         <div class="container">
             <div class="ml-16 md:ml-0 swiper card_slider">
                 <div class="swiper-wrapper">
@@ -248,7 +247,7 @@
     <!-- NEWLY RELEASED -->
 
 
-    <h1 class="my-16 text-neutral-950 text-5xl font-extrabold ml-40"><span
+    <!-- <h1 class="my-16 text-neutral-950 text-5xl font-extrabold ml-40"><span
             class="bg-neutral-950 text-neutral-50 px-3">Newly</span> released</h1>
     <section class="slider_container">
         <div class="container">
@@ -361,7 +360,7 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 
@@ -370,7 +369,7 @@
     <!-- ALL BOOKS -->
 
 
-    <h1 class="my-16 text-neutral-950 text-5xl font-extrabold ml-40"><span
+    <!-- <h1 class="my-16 text-neutral-950 text-5xl font-extrabold ml-40"><span
             class="bg-neutral-950 text-neutral-50 px-3">All</span> books</h1>
     <section class="slider_container">
         <div class="container">
@@ -595,54 +594,27 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <!--popup books-->
+      <!-- DYNAMIC BOOKS -->
 
-    <div class="flex flex-row gap-10 mx-auto fixed top-32 left-60  z-10  justify-between p-10 items-center bg-white border border-gray-500 rounded-md max-w-screen-lg  transform scale-0  transition duration-700 ease-in-out"
-        id="popupbook">
-        <div class="flex flex-col gap-4">
-            <img src="0_dYO0d9JDeGs8CWCp.jpg" alt="Book Cover" width="400" height="600">
-            <button class="w-56 py-2 px-4 bg-green-400 text-white rounded-md shadow-lg">Add To Cart</button>
-        </div>
 
-        <div>
-            <p class="text-xl font-semibold">The Hunger Games #1</p>
-            <h1 class="text-4xl font-bold">The Hunger Games</h1>
-            <p class="text-base">Suzanne Collins</p>
+      <h1 class="my-16 text-neutral-950 text-5xl font-extrabold mt-52 ml-40"><span
+        class="bg-neutral-950 text-neutral-50 px-3">Dynamic</span> books</h1>
+<section class="slider_container">
+    <div class="container">
+        <div class="ml-16 md:ml-0 swiper card_slider">
+            <div class="swiper-wrapper" id="swiper-wrapper">
 
-            <p class="text-sm mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate debitis
-                temporibus alias voluptates pariatur in.</p><br>
 
-            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita accusamus autem
-                doloremque magni ipsa. Aspernatur porro adipisci ducimus maiores reprehenderit mollitia aut.</p>
 
-            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint totam beatae dolor autem
-                nihil quas qui consequuntur, corporis tempora magni reprehenderit accusantium.</p>
-
-            <div class="flex flex-row gap-4 mt-4">
-                <div>
-                    <h5 class="text-xs">Genre</h5>
-                </div>
-                <div class="flex text-xs flex-row gap-2">
-                    <p>Adult</p>
-                    <p>Fiction</p>
-                    <p>Fantasy</p>
-                    <p>Dystopia</p>
-                    <p>Science</p>
-                    <p>Romance</p>
-                    <p>Adventure</p>
-                    <p>...more</p>
-                </div>
             </div>
-            <p class="text-xs mt-4">374 pages, Hardcover</p>
-            <p class="text-xs">First published September 14, 2008</p>
-        </div>
-        <div class="pb-96 cursor-pointe">
-            <a href="index.html"><img src="button ferme.png" alt="" width="25" height="25"></a>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
-
+</section>
 
     <!--popup panier-->
     <div class="float-right border-2 border-black rounded absolute top-16 z-10 right-0 w-56 flex flex-col items-center bg-gray-100 top-0  transform scale-0 transition-transform"
@@ -654,8 +626,8 @@
             <div> <a href="index.html"><img class="m-1.5 cursor-pointer" src="button ferme.png" alt="" width="15"
                         height="15"></a></div>
         </div>
-        <div class="text-center flex flex-col gap-8 mt-8 ">
-            <div class="flex place-content-between w-48 text-sm border-2 border-black rounded w-52 bg-gray-200">
+        <div class="text-center flex flex-col gap-8 mt-8 " id="cart-wrapper">
+            <!-- <div class="flex place-content-between w-48 text-sm border-2 border-black rounded w-52 bg-gray-200">
                 <div>
                     <p class="mt-2">First Gen: A Memoir</p>
                 </div>
@@ -663,60 +635,9 @@
                     <p>$50</p>
                     <p class="text-sm text-gray-400">Qty:1</p>
                 </div>
-            </div>
-
-
-            <div class="flex place-content-between w-48 text-sm border-2 border-black rounded w-52 bg-gray-200">
-                <div>
-                    <p class="mt-2">First Gen: A Memoir</p>
-                </div>
-                <div>
-                    <p>$50</p>
-                    <p class="text-sm text-gray-400">Qty:1</p>
-                </div>
-            </div>
-
-
-            <div class="flex place-content-between w-48 text-sm border-2 border-black rounded w-52 bg-gray-200">
-                <div>
-                    <p class="mt-2">First Gen: A Memoir</p>
-                </div>
-                <div>
-                    <p>$50</p>
-                    <p class="text-sm text-gray-400">Qty:1</p>
-                </div>
-            </div>
+            </div> -->
         </div>
         <div class="mt-4 flex flex-col gap-2">
-            <div class="flex place-content-between w-48">
-                <div>
-                    <h4> <b>Subtotal</b> </h4>
-                </div>
-                <div>
-                    <h4> <b>$1505</b> </h4>
-                </div>
-            </div>
-
-
-            <div class="flex place-content-between w-48">
-                <div>
-                    <h4><b>Shipping </b></h4>
-                </div>
-                <div>
-                    <h4> <b>$20 </b></h4>
-                </div>
-            </div>
-
-
-
-            <div class="flex place-content-between w-48">
-                <div>
-                    <h4><b>Promo Code </b></h4>
-                </div>
-                <div>
-                    <h4><b>+add </b></h4>
-                </div>
-            </div>
 
 
 
@@ -726,7 +647,7 @@
                     <h4><b>Total </b></h4>
                 </div>
                 <div>
-                    <h4><b>$1620 </b></h4>
+                    <h4><b id="cart-total"></b></h4>
                 </div>
             </div>
         </div>
@@ -763,7 +684,7 @@
             <div>
                 <div class="flex justify-between">
                     <div>
-                        <h2><b>HOME</b </h2>
+                        <h2><b>HOME</b> </h2>
                     </div>
                     <div>
                         <h2><b>ABOUT US </b></h2>
