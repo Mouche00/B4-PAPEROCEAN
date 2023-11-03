@@ -44,10 +44,8 @@ btnAllBooks.addEventListener("click", () => {
 });
 
 
-
-
 var swiper = new Swiper(".card_slider", {
-    slidesPerView: 4,
+    slidesPerView: 2,
     spaceBetween: 30,
     pagination: {
         el: ".swiper-pagination",
@@ -57,4 +55,23 @@ var swiper = new Swiper(".card_slider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-});
+    breakpoints: {
+        // When window width is <= 768px (mobile view)
+        768: {
+            slidesPerView: 4,
+        },
+    },
+})
+const burgerBtn = document.getElementById("burger");
+const mobileNav = document.getElementById("mobile-nav");
+
+
+
+burgerBtn.addEventListener("click",function(){
+    if(mobileNav.style.display == "none"){
+        mobileNav.style.display = "block";
+    }
+    else{
+        mobileNav.style.display = "none";
+    }
+})
